@@ -7,6 +7,7 @@
 //
 
 #import "MECAppDelegate.h"
+#import "MECManager.h"
 #import "MECController.h"
 #import <TSMessage.h>
 
@@ -46,6 +47,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    [[MECManager sharedManager] findCurrentLocation];
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
